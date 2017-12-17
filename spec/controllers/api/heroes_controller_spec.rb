@@ -35,5 +35,12 @@ describe 'API::HeroesController', type: :api do
       get "/api/heroes/#{hero.id}"
       expect(json['id']).to eq hero.id
     end
+    %w{ id name real_name health armour shield }.each do |attr|
+      it "returns hero parameter #{attr}" do
+        hero = create :hero
+        get "/api/heroes/#{hero.id}"
+        expect(json[attr]).to eq hero.method(attr).call
+      end
+    end
   end
 end

@@ -18,4 +18,16 @@ describe 'API::Users::SessionsController', type: :api do
     post '/api/users/sign_in', { user: { email: @user.email, password: '123123123' } }.to_json
     expect(last_response.headers['Authorization']).not_to be_empty
   end
+  it 'doesn\'t authenticate user with wrong email' do
+    create :user, email: 'test1@test.com', password: '123123123'
+    data = { user: { email: 'test2@test.com', password: '123123123' } }
+    post '/api/users/sign_in', data.to_json
+    expect(last_response.status).to eq 401
+  end
+  it 'doesn\'t authenticate user with wrong password' do
+    create :user, email: 'test1@test.com', password: '123123123'
+    data = { user: { email: 'test1@test.com', password: '321321321' } }
+    post '/api/users/sign_in', data.to_json
+    expect(last_response.status).to eq 401
+  end
 end

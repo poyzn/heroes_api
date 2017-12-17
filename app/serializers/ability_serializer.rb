@@ -1,3 +1,4 @@
 class AbilitySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :description, :is_ultimate
+  has_many :heroes
 end

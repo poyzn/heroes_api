@@ -38,5 +38,12 @@ describe 'API::AbilitiesController', type: :api do
       get "/api/abilities/#{ability.id}"
       expect(json['id']).to eq ability.id
     end
+    %w{ id name description is_ultimate }.each do |attr|
+      it "returns ability parameter #{attr}" do
+        ability = create :ability
+        get "/api/abilities/#{ability.id}"
+        expect(json[attr]).to eq ability.method(attr).call
+      end
+    end
   end
 end
