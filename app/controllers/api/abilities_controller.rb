@@ -9,12 +9,14 @@ module API
     end
     
     api :GET, '/abilities', 'Returns list of abilities.'
+    param :hero_id, :number, 'Hero ID'
     param :ultimate, :boolean, 'Ultimate ability. Default is null. if null, returns all abilities.'
     formats %w[json plain]
     example Requests::Abilities.index
     # example Responses::Abilities.many
     def index
-      abilities = Ability.with_ultimate(params[:ultimate])
+      abilities = Ability.with_hero(params[:hero_id])
+                         .with_ultimate(params[:ultimate])
       render json: abilities, each_serializer: AbilitiesSerializer
     end
   

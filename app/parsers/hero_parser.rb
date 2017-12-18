@@ -7,7 +7,7 @@ class HeroParser
   ABILITY_URL     = 'https://overwatch-api.net/api/v1/ability/%d'
   
   def get_heroes
-    parse(HEROES_URL)
+    parse(HEROES_URL)['data']
   end
 
   def get_hero(id)

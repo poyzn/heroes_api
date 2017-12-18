@@ -4,6 +4,9 @@ class Ability < ApplicationRecord
   
   validates :name, presence: true
   
+  scope :with_hero, ->(hero_id=nil) {
+    hero_id ? joins(:hero_abilities).where(hero_abilities: { hero_id: hero_id }) : all
+  }
   scope :with_ultimate, ->(ultimate=nil) {
     ultimate ? where(is_ultimate: ultimate) : all
   }

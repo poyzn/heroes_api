@@ -4,9 +4,9 @@ class Hero < ApplicationRecord
   
   validates :name, presence: true
   validates :real_name, presence: true
-  validates :health, numericality: { greater_than_or_equal_to: 0, less_that_or_equal_to: 100 }
-  validates :armour, numericality: { greater_than_or_equeal_to: 0 }
-  validates :shield, numericality: { greater_than_or_equeal_to: 0 }
+  validates :health, numericality: { greater_than_or_equal_to: 0 }
+  validates :armour, numericality: { greater_than_or_equal_to: 0 }
+  validates :shield, numericality: { greater_than_or_equal_to: 0 }
   
   scope :with_health, ->(health_min=nil, health_max=nil) {
     if health_min && health_max
