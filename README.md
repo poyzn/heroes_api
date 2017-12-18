@@ -28,7 +28,7 @@ A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb9
 
 ## Testing
 
-How to run the test suite `rspec`.
+Run the test suite `rspec`.
 
 At this point all test should pass.
 
@@ -111,6 +111,7 @@ Visit [admin panel](http://localhost:3000/admin) to manage stored data.
 - username: `admin@example.com`
 - password: `password`
 
+## Thank you!
 
 
 
