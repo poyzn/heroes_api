@@ -1,4 +1,4 @@
 class HeroSerializer < ActiveModel::Serializer
   attributes :id, :name, :real_name, :health, :armour, :shield
-  has_many :abilities
+  has_many :abilities, serializer: AbilitiesSerializer
 end

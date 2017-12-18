@@ -40,7 +40,7 @@ Run `rails heroes_source:parse` to fetch heroes data from remote source and pers
 
 Visit [Apipie path](http://localhost:3000/apipie) to get API documentation. 
 
-Now is the fun part. Of course you can disable user authentication, and access API actions
+And now start the rails server `rails s` and let's have some fun! Of course you can disable user authentication, and access API actions
  without it, but it's not interesting. Let's access our restricted API with auth token. 
 First we should obtain it. You can get it from registration and authentication processes. 
 Run from the terminal to register a new user:
