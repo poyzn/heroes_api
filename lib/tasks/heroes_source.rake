@@ -9,14 +9,13 @@ namespace :heroes_source do
       puts '-------------------------'
       heroes_data.each do |data|
         hero = Hero.create(data.extract!('id', 'name', 'real_name', 'health', 'armour', 'shield'))
-        heroes << heroes
+        heroes << hero
         puts "Added Hero with name #{hero.name}"
       end
     end
     if heroes.any?
       heroes.each do |hero|
-        puts 'Start parsing abilities'
-        puts '_______________________'
+        puts "Start parsing abilities for #{hero.name}"
         abilities = parser.get_hero(hero.id)['abilities']
         abilities.each do |data|
           ability = Ability.find_or_create_by(id: data['id']) do |a|
@@ -28,9 +27,9 @@ namespace :heroes_source do
           hero.abilities << ability
           puts "Ability #{ability.name} added to hero #{hero.name}"
         end
+        puts 'next hero -->'
+        sleep 1
       end
-      puts 'next hero -->'
-      sleep 1
     end
     puts 'Parsing is finished'
   end
