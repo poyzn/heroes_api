@@ -8,8 +8,10 @@ Rails.application.routes.draw do
       post '/users/sign_up',      to: 'users/registrations#create'
       post '/users/sign_in',      to: 'users/sessions#create'
     end
-    resources :heroes
-    resources :abilities
+    resources :heros, only: [:index, :show] do
+      resources :abilities, only: [:index]
+    end
+    resources :abilities, only: [:index, :show]
   end
   match '*unmatched_route', :to => 'application#raise_not_found!', via: :all
 end

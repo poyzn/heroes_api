@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 module API
-  class HeroesController < APIController
+  class HerosController < APIController
 
     resource_description do
       name  'Heroes'
       short 'Authentication required'
     end
     
-    api :GET, '/heroes', 'Returns list of heroes.'
+    api :GET, '/heros', 'Returns list of heroes.'
     param :health_min, :number, 'Minimum health'
     param :health_max, :number, 'Maximum health'
     formats %w[json plain]
@@ -19,8 +19,8 @@ module API
       render json: heroes, each_serializer: HeroesSerializer
     end
   
-    api :GET, '/heroes/:id', 'Returns hero\'s data
-                              with abilities.'
+    api :GET, '/heros/:id', 'Returns hero\'s data
+                             with abilities.'
     param :id, :number, 'Hero ID', required: true
     formats %w[json plain]
     example Requests::Heroes.show

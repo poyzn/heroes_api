@@ -1,18 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb916c6d0b5a266eee3a1101dc96#file-codetask-md)
 
-Things you may want to cover:
+###Features
+- Apipie for documentation
+- Registration and authentication via API with Devise
+- JWT as additional authorization Devise strategy
+- Some API calls required authorization with JWT
+- Rspec + Factory Bot tests for models and API calls
+- Parsing heroes' remote data service
+- Active Admin as admin panel
 
-* Ruby version 2.4.1
+###Prepare the project
 
-* Configuration
+* Ruby version: 2.4.1
 
-* Database creation `db:setup`
+* Database: PosgreSQL
 
-* Database initialization `db:seed`
+* Update the file with your database `config/database.yml`
 
-* How to run the test suite `rspec`
+* Run `db:setup` to init database.
 
-* ...
+## Testing
+
+How to run the test suite `rspec`.
+
+At this point all test should pass.
+
+## Parsing Data
+
+## API
+
+## Admin panel
+
