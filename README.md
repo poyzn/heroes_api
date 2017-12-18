@@ -41,6 +41,9 @@ Run `rails heroes_source:parse` to fetch heroes data from remote source and pers
 And now start the rails server `rails s` and let's have some fun!
 
 Visit [Apipie path](http://localhost:3000/apipie) to get API documentation. 
+Use the next credentials:
+ - username: `heroes`
+ - password: `heroes`
 
 Of course you can disable user authentication, and access API actions
  without it, but it's not interesting. Let's access our restricted API with auth token. 
@@ -100,9 +103,6 @@ $ curl -X POST -d 'user[email]=test@test.com&user[password]=123123123' -D - loca
  Each time you'll get in response body a JSON object with persisted data or with error and 
  corresponding http status.
  For more information please access [Apipie documentation](http://localhost:3000/apipie).
- Use the next credentials:
- - username: `heroes`
- - password: `heroes`
  
 
 ## Admin panel
