@@ -27,13 +27,12 @@ namespace :heroes_source do
           end
           hero.abilities << ability
           puts "Ability #{ability.name} added to hero #{hero.name}"
-          end
         end
-        puts 'next hero -->'
-        sleep 1
       end
+      puts 'next hero -->'
+      sleep 1
     end
     puts 'Parsing is finished'
   end
-
+  
 end

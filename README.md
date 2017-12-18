@@ -2,7 +2,7 @@
 
 A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb916c6d0b5a266eee3a1101dc96#file-codetask-md)
 
-###Features
+### Features
 - Apipie for documentation with basic auth access
 - Registration and authentication via API with Devise
 - JWT as additional authorization Devise strategy
@@ -12,15 +12,19 @@ A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb9
 - Parsing heroes' remote data with rake task
 - Active Admin as admin panel
 
-###Prepare the project
+### Prepare the project
 
 * Ruby version: 2.4.1
 
 * Database: PosgreSQL
 
-* Update the file with your database `config/database.yml`
+1. Clone the repo.
 
-* Run `db:setup` to init database.
+2. Update the file with your database `config/database.yml`.
+
+3. Run `db:setup` to init database.
+
+4. Run `bundle install` to install gems.
 
 ## Testing
 
