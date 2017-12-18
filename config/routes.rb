@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   apipie
   devise_for :users, skip: :all
+  devise_for :admins, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   namespace :api, default: { respond_to: :json } do
     devise_scope :user do
       post '/users/sign_up',      to: 'users/registrations#create'

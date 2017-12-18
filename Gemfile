@@ -47,6 +47,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'activeadmin'
 gem 'apipie-rails'
-gem 'devise', github: 'plataformatec/devise', branch: 'master'
+gem 'devise', github: 'plataformatec/devise'
 gem 'jwt'
-gem 'oauth_token_verifier'
