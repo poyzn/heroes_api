@@ -20,7 +20,7 @@ A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb9
 
 1. Clone the repo.
 
-2. Update the file with your database `config/database.yml`.
+2. Update the file with your databases `config/database.yml`.
 
 3. Run `db:setup` to init database.
 
