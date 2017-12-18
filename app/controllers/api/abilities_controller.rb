@@ -13,7 +13,7 @@ module API
     param :ultimate, :boolean, 'Ultimate ability. Default is null. if null, returns all abilities.'
     formats %w[json plain]
     example Requests::Abilities.index
-    # example Responses::Abilities.many
+    example Responses::Abilities.many
     def index
       abilities = Ability.with_hero(params[:hero_id])
                          .with_ultimate(params[:ultimate])
@@ -24,7 +24,7 @@ module API
                                  Includes heros with this ability'
     param :id, :number, 'Ability ID', required: true
     formats %w[json plain]
-    # example Responses::Abilities.one
+    example Responses::Abilities.one
     def show
       ability = Ability.find params[:id]
       render json: ability, serializer: AbilitySerializer

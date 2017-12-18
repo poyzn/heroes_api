@@ -13,7 +13,7 @@ module API
     param :health_max, :number, 'Maximum health'
     formats %w[json plain]
     example Requests::Heroes.index
-    # example Responses::Heroes.many
+    example Responses::Heroes.many
     def index
       heroes = Hero.with_health(params[:health_min], params[:health_max])
       render json: heroes, each_serializer: HeroesSerializer
@@ -24,7 +24,7 @@ module API
     param :id, :number, 'Hero ID', required: true
     formats %w[json plain]
     example Requests::Heroes.show
-    # example Responses::Heros.one
+    example Responses::Heroes.one
     def show
       hero = Hero.find params[:id]
       render json: hero, serializer: HeroSerializer

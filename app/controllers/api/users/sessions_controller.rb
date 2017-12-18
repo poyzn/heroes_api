@@ -20,7 +20,7 @@ module API
         param :password, String, 'Пароль', required: true
       end
       example Requests::Users.sign_in
-      # example Response::Users.post
+      example Responses::Users.one
       formats %w[json plain]
       def create
         user = warden.authenticate(scope: :user)

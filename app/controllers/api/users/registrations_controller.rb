@@ -21,7 +21,7 @@ module API
       end
       formats %w[json plain]
       example Requests::Users.sign_up
-      # example Response::Users.create
+      example Responses::Users.one
       def create
         user = User.create user_params
         if user.errors.empty?
