@@ -22,9 +22,9 @@ A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb9
 
 2. Update the file with your databases `config/database.yml`.
 
-3. Run `db:setup` to init database.
+3. Run `bundle install` to install gems.
 
-4. Run `bundle install` to install gems.
+4. Run `db:setup` to init database.
 
 ## Testing
 
