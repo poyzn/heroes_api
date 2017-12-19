@@ -24,7 +24,7 @@ A test project for the [code challenge](https://gist.github.com/lefty313/8cc3bb9
 
 3. Run `bundle install` to install gems.
 
-4. Run `db:setup` to init database.
+4. Run `rails db:setup` to init database and seed.
 
 ## Testing
 
